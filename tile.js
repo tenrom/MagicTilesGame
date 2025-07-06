@@ -19,7 +19,7 @@ class TileElement extends HTMLElement{
         
         this.classList.add('tile')
 
-        this.addEventListener('click',()=>{this.OnClickTile()})
+        this.addEventListener('touchstart',()=>{this.OnClickTile()})
         this.style.gridColumn=this.getAttribute('column')
         this.style.gridRow=1
 
