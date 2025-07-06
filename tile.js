@@ -9,6 +9,7 @@ class TileElement extends HTMLElement{
         console.log("destroy")
         
         vibrer()
+        clearInterval(this.idTimer)
         this.remove()
     }
     MoveDown(){
@@ -19,7 +20,7 @@ class TileElement extends HTMLElement{
         
         this.classList.add('tile')
 
-        this.addEventListener('touchstart',()=>{this.OnClickTile()})
+        this.addEventListener('mousedown',()=>{this.OnClickTile()})
         this.style.gridColumn=this.getAttribute('column')
         this.style.gridRow=1
 
