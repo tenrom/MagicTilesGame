@@ -1,8 +1,13 @@
 
 let rng=new Math.seedrandom('Hello World')
 function NewLine(){
-    
-    document.body.innerHTML+=`<game-tile column=${Math.round(rng()*3)+1}></game-tile>`
+    n=Math.round(rng()*3)+1
+    console.log(n===document.getElementsByClassName('tile')[document.getElementsByClassName('tile').length-1].getAttribute('column'))
+    if (n===Number(document.getElementsByClassName('tile')[document.getElementsByClassName('tile').length-1].getAttribute('column'))){
+        document.getElementsByClassName('tile')[document.getElementsByClassName('tile').length-1].GrowUp()
+    }else{
+        document.body.innerHTML+=`<game-tile column=${n}></game-tile>`
+    }
 }
 
 
