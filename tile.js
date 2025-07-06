@@ -11,6 +11,7 @@ class TileElement extends HTMLElement{
         vibrer()
         clearInterval(this.idTimer)
         this.remove()
+
     }
     MoveDown(){
         // console.log(this.style.transform)
